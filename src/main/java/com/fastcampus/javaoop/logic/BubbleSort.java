@@ -9,11 +9,11 @@ public class BubbleSort <T extends Comparable<T>> {
         List<T> output = new ArrayList<>(list);
 
         for (int i = output.size() - 1; i > 0; i--) {
-            for (int j = 0; j < i; i++) {
-                if (output.get(i).compareTo(output.get(i + 1)) > 0) {
-                    T temp = output.get(i);
-                    output.set(i, output.get(i + 1));
-                    output.set(i + 1, temp);
+            for (int k = 0; k < i; k++) {
+                if (output.get(k).compareTo(output.get(k + 1)) > 0) {
+                    T temp = output.get(k);
+                    output.set(k, output.get(k + 1));
+                    output.set(k + 1, temp);
                 }
             }
         }
